@@ -41,8 +41,16 @@ public abstract class Cell implements IOwnable {
 
 	/**
 	 * Play action.
+	 * @deprecated Use {@link #playAction(String)} instead
 	 */
 	public abstract void playAction();
+
+	/**
+	 * Play action.
+	 * @param msg TODO
+	 * @return TODO
+	 */
+	public abstract boolean playAction(String msg);
 
 	/**
 	 * Sets the name.
