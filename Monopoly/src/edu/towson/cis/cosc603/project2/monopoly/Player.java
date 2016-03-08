@@ -24,7 +24,7 @@ public class Player {
 	private String name;
 
 	/** The position. */
-	private IOwnable position;
+	private Cell position;
 	
 	/** The properties. */
 	private ArrayList<PropertyCell> properties = new ArrayList<PropertyCell>();
@@ -197,7 +197,7 @@ public class Player {
 	 *
 	 * @return the position
 	 */
-	public IOwnable getPosition() {
+	public Cell getPosition() {
 		return this.position;
 	}
 	
@@ -413,7 +413,7 @@ public class Player {
 	 *
 	 * @param newPosition the new position
 	 */
-	public void setPosition(IOwnable newPosition) {
+	public void setPosition(Cell newPosition) {
 		this.position = newPosition;
 	}
 
