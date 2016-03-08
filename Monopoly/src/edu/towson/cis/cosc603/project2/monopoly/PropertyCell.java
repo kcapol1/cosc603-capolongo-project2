@@ -70,8 +70,10 @@ public class PropertyCell extends Cell {
 	}
 
 	/**
-	 * @param rentToCharge
-	 * @return
+	 * Calculate monopolies rent.
+	 *
+	 * @param rentToCharge the rent to charge
+	 * @return the int
 	 */
 	private int calculateMonopoliesRent(int rentToCharge) {
 		String [] monopolies = theOwner.getMonopolies();
@@ -87,6 +89,8 @@ public class PropertyCell extends Cell {
 	 * @see edu.towson.cis.cosc442.project1.monopoly.Cell#playAction()
 	 */
 	/**
+	 * Play action.
+	 *
 	 * @deprecated Use {@link #playAction(String)} instead
 	 */
 	public void playAction() {

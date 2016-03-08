@@ -23,8 +23,10 @@ public class CardCell extends Cell {
 	 * @see edu.towson.cis.cosc442.project1.monopoly.Cell#playAction()
 	 */
 	/**
-	 * @deprecated Use {@link #playAction(String)} instead
-	 */
+     * Play action.
+     *
+     * @deprecated Use {@link #playAction(String)} instead
+     */
 	public void playAction() {
 		playAction(null);
 	}

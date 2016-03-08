@@ -53,6 +53,8 @@ public class RailRoadCell extends Cell {
 	 * @see edu.towson.cis.cosc442.project1.monopoly.Cell#playAction()
 	 */
 	/**
+	 * Play action.
+	 *
 	 * @deprecated Use {@link #playAction(String)} instead
 	 */
 	public void playAction() {
