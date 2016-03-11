@@ -249,17 +249,24 @@ public class Player {
 	 * @param rentValue the rent value
 	 */
 	public void payRentTo(Player owner, int rentValue) {
+		owner(owner, rentValue);
 		if(money < rentValue) {
-			owner.money += money;
 			money -= rentValue;
 		}
 		else {
 			money -= rentValue;
-			owner.money +=rentValue;
 		}
 		if(isBankrupt()) {
 			money = 0;
 			exchangeProperty(owner);
+		}
+	}
+
+	private void owner(Player owner, int rentValue) {
+		if (money < rentValue) {
+			owner.money += money;
+		} else {
+			owner.money += rentValue;
 		}
 	}
 	
