@@ -148,8 +148,7 @@ public class GameMaster {
     public void btnRollDiceClicked() {
 		int[] rolls = rollDice();
 		if((rolls[0]+rolls[1]) > 0) {
-			Player player = getCurrentPlayer();
-			gui.setRollDiceEnabled(false);
+			Player player = player(rolls);
 			StringBuffer msg = new StringBuffer();
 			msg.append(player.getName())
 					.append(", you rolled ")
@@ -157,10 +156,16 @@ public class GameMaster {
 					.append(" and ")
 					.append(rolls[1]);
 			gui.showMessage(msg.toString());
-			movePlayer(player, rolls[0] + rolls[1]);
-			gui.setBuyHouseEnabled(false);
 		}
     }
+
+	private Player player(int[] rolls) {
+		Player player = getCurrentPlayer();
+		gui.setRollDiceEnabled(false);
+		movePlayer(player, rolls[0] + rolls[1]);
+		gui.setBuyHouseEnabled(false);
+		return player;
+	}
 
     /**
      * Btn trade clicked.
