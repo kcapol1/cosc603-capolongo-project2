@@ -10,6 +10,8 @@ import java.util.Iterator;
  */
 public class GameMaster {
 
+	private GameMasterProduct gameMasterProduct = new GameMasterProduct();
+
 	/** The game master. */
 	private static GameMaster gameMaster;
 	
@@ -24,9 +26,6 @@ public class GameMaster {
 	
 	/** The gui. */
 	private MonopolyGUI gui;
-	
-	/** The init amount of money. */
-	private int initAmountOfMoney;
 	
 	/** The players. */
 	private ArrayList<Player> players = new ArrayList<Player>();
@@ -56,7 +55,7 @@ public class GameMaster {
 	 * Instantiates a new game master.
 	 */
 	public GameMaster() {
-		initAmountOfMoney = 1500;
+		gameMasterProduct.setInitAmountOfMoney(1500);
 		dice = new Die[]{new Die(), new Die()};
 	}
 
@@ -245,7 +244,7 @@ public class GameMaster {
 	 * @return the inits the amount of money
 	 */
 	public int getInitAmountOfMoney() {
-		return initAmountOfMoney;
+		return gameMasterProduct.getInitAmountOfMoney();
 	}
 	
 	/**
@@ -454,7 +453,7 @@ public class GameMaster {
 	 * @param money the new inits the amount of money
 	 */
 	public void setInitAmountOfMoney(int money) {
-		this.initAmountOfMoney = money;
+		gameMasterProduct.setInitAmountOfMoney(money);
 	}
 
 	/**
@@ -463,12 +462,7 @@ public class GameMaster {
 	 * @param number the new number of players
 	 */
 	public void setNumberOfPlayers(int number) {
-		players.clear();
-		for(int i =0;i<number;i++) {
-			Player player = new Player();
-			player.setMoney(initAmountOfMoney);
-			players.add(player);
-		}
+		gameMasterProduct.setNumberOfPlayers(number, players);
 	}
 
 	/**
