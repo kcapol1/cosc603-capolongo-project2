@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package edu.towson.cis.cosc603.project2.monopoly;
 
 import java.util.ArrayList;
@@ -10,6 +13,7 @@ import java.util.Iterator;
  */
 public class GameMaster {
 
+	/** The game master product. */
 	private GameMasterProduct gameMasterProduct = new GameMasterProduct();
 
 	/** The game master. */
@@ -116,6 +120,9 @@ public class GameMaster {
 		gui();
     }
 
+	/**
+	 * Gui.
+	 */
 	private void gui() {
 		if (getCurrentPlayer().isBankrupt()) {
 			gui.setBuyHouseEnabled(false);
@@ -159,6 +166,12 @@ public class GameMaster {
 		}
     }
 
+	/**
+	 * Player.
+	 *
+	 * @param rolls the rolls
+	 * @return the player
+	 */
 	private Player player(int[] rolls) {
 		Player player = getCurrentPlayer();
 		gui.setRollDiceEnabled(false);

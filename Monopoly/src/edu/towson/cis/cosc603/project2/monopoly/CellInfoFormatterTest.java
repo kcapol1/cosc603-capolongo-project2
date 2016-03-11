@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package edu.towson.cis.cosc603.project2.monopoly;
 
 import edu.towson.cis.cosc603.project2.monopoly.gui.GoCellInfoFormatter;

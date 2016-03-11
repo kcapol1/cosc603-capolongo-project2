@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package edu.towson.cis.cosc603.project2.monopoly;
 
 import java.util.ArrayList;
@@ -10,6 +13,8 @@ import java.util.Hashtable;
  * The Class Player.
  */
 public class Player {
+	
+	/** The player product. */
 	private PlayerProduct playerProduct = new PlayerProduct();
 
 	/** The in jail. */
@@ -166,7 +171,7 @@ public class Player {
 	/**
 	 * Gets the out of jail.
 	 *
-	 * @return the out of jail
+	 * 
 	 */
 	public void getOutOfJail() {
 		money -= JailCell.BAIL;
@@ -262,6 +267,12 @@ public class Player {
 		}
 	}
 
+	/**
+	 * Owner.
+	 *
+	 * @param owner the owner
+	 * @param rentValue the rent value
+	 */
 	private void owner(Player owner, int rentValue) {
 		if (money < rentValue) {
 			owner.money += money;
