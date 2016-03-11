@@ -113,21 +113,24 @@ public class GameMaster {
      */
     public void btnGetOutOfJailClicked() {
 		getCurrentPlayer().getOutOfJail();
-		if(getCurrentPlayer().isBankrupt()) {
+		gui();
+    }
+
+	private void gui() {
+		if (getCurrentPlayer().isBankrupt()) {
 			gui.setBuyHouseEnabled(false);
 			gui.setDrawCardEnabled(false);
 			gui.setEndTurnEnabled(false);
 			gui.setGetOutOfJailEnabled(false);
 			gui.setPurchasePropertyEnabled(false);
 			gui.setRollDiceEnabled(false);
-			gui.setTradeEnabled(getCurrentPlayerIndex(),false);
-		}
-		else {
+			gui.setTradeEnabled(getCurrentPlayerIndex(), false);
+		} else {
 			gui.setRollDiceEnabled(true);
 			gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());
 			gui.setGetOutOfJailEnabled(getCurrentPlayer().isInJail());
 		}
-    }
+	}
 
     /**
      * Btn purchase property clicked.
